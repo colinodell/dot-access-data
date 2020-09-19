@@ -1,0 +1,52 @@
+{
+    "name": "colinodell/dot-access-data",
+    "type": "library",
+    "description": "Given a deep data structure, access data by dot or slash notation.",
+    "homepage": "https://github.com/colinodell/dot-access-data",
+    "keywords": ["dot", "slash", "access", "data", "notation", "nested", "array", "structure"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Colin O'Dell",
+            "email": "colinodell@gmail.com",
+            "homepage": "https://www.colinodell.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.42",
+        "phpunit/phpunit": "^8.5 || ^9.2",
+        "scrutinizer/ocular": "1.6.0",
+        "unleashedtech/php-coding-standard": "^2.5",
+        "vimeo/psalm": "^3.16"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "ColinODell\\DotAccessData\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ColinODell\\DotAccessData\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpstan": "phpstan analyse",
+        "phpunit": "phpunit --no-coverage",
+        "psalm": "psalm",
+        "test": [
+            "@phpcs",
+            "@phpstan",
+            "@psalm",
+            "@phpunit"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
